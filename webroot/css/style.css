@@ -1,0 +1,97 @@
+:root {
+  --pink: #E10098;
+  --turquoise: #66EFD9;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  background-color: rgba(9, 20, 28, 1);
+  background-image: url(/images/background-pattern.svg);
+  background-size: 450px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family:
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "Oxygen-Sans",
+    "Ubuntu",
+    "Cantarell",
+    "Helvetica Neue",
+    "sans-serif";
+  background-color: rgba(9, 20, 28, 0.5);
+  color: #fff;
+}
+
+.title {
+  color: var(--pink);
+  margin: 1rem;
+}
+
+.code__tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  background-color: #172B3A;
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 1rem;
+  padding: 1rem 2rem;
+  color: var(--turquoise);
+  text-decoration: none;
+  border: 2px solid var(--turquoise);
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-out;
+}
+
+.btn:hover {
+  color: rgb(9, 20, 28);
+  background-color: var(--turquoise);
+}
+
+.link {
+  color: var(--pink);
+  font-style: italic;
+}
+
+.text--small {
+  font-size: 0.9rem;
+  margin: 1rem;
+}
+
+.text--turquoise {
+  color: var(--turquoise);
+}

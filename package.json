@@ -1,0 +1,51 @@
+{
+  "name": "vertx-graphql",
+  "description": "Create fast GraphQL HTTP APIs with Vert.x",
+  "version": "1.0.8",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "src"
+  ],
+  "homepage": "https://vertx-graphql.github.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vertx-graphql/vertx-graphql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vertx-graphql/vertx-graphql/issues"
+  },
+  "author": "Kai Wedekind <wedekind.kai@googlemail.com>",
+  "public": true,
+  "dependencies": {
+    "@vertx/web": "^3.7.1",
+    "graphql": "^14.0.2",
+    "querystring": "^0.2.0"
+  },
+  "keywords": [
+    "Vert.x",
+    "graphql",
+    "graphql-js",
+    "graphql-server",
+    "GraphQL",
+    "Schema",
+    "Schema Language",
+    "Middleware",
+    "JavaScript",
+    "http",
+    "server",
+    "api",
+    "Tools"
+  ],
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "scripts": {
+    "postinstall": "es4x install",
+    "start": "es4x-launcher",
+    "test": "es4x-launcher test js:index.test.js"
+  },
+  "devDependencies": {
+    "@vertx/core": "^3.7.1",
+    "@vertx/unit": "^3.7.1"
+  }
+}
