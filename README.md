@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://github.com/vertx-graphql/vertx-graphql/blob/master/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Vert.x GraphQL is released under the MIT license." />
+    <img src="https://img.shields.io/badge/license-Apache 2.0-blue.svg" alt="Vert.x GraphQL is released under the Apache 2.0 license." />
   </a>
   <a href="https://www.npmjs.org/package/vertx-graphql">
     <img src="https://img.shields.io/npm/v/vertx-graphql.svg" alt="Current npm package version." />
@@ -94,4 +94,4 @@ Check out our [**Contributing Guide**](./HOW_TO_CONTRIBUTE.md) for ideas on cont
 
 ## License
 
-Licensed under the [MIT License](./LICENSE).
+Licensed under the [Apache 2.0](./LICENSE).
