@@ -41,8 +41,10 @@ interface GraphQLServerOptions {
     defaultQuery?: string,
   },
   subscriptions?: {
-    onConnect?: (websocket: WebSocket, context: ConnectionContext) => void
-    onDisconnect?: (websocket: WebSocket, context: ConnectionContext) => void
+    onConnect?: Function
+    onDisconnect?: Function
+    onOperation?: Function
+    onOperationComplete?: Function
   }
 }
 

@@ -16,7 +16,7 @@
 
 import { MessageTypes } from '../server/message-types';
 
-function parseLegacyProtocolMessage (connectionContext, message) {
+module.exports.parseLegacyProtocolMessage = function (connectionContext, message) {
   let messageToReturn = message;
 
   switch (message.type) {
@@ -76,8 +76,4 @@ function parseLegacyProtocolMessage (connectionContext, message) {
   }
 
   return messageToReturn;
-}
-
-module.exports = {
-  parseLegacyProtocolMessage
 }

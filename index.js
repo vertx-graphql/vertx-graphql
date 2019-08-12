@@ -25,12 +25,21 @@ const server = new GraphQLServer({
     defaultQuery: '{ welcome hello }'
   },
   subscriptions: {
-    onConnect: (websocket) => {
-      console.log('onConnect', websocket)
+    onConnect: (payload, connectionContext) => {
+      console.log('onConnect', payload)
     },
     onDisconnect: (websocket) => {
       console.log('onDisconnect', websocket)
+    },
+    /*
+    onOperation: (message, params, websocket) => {
+      
+    },
+    onOperationComplete: (websocket, id) => {
+      console.log('onOperationComplete ws', websocket)
+      console.log('onOperationComplete ID', id)
     }
+    */
   }
 });
 

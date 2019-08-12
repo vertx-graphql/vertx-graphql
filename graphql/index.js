@@ -1,3 +1,8 @@
+const { PubSub } = require('../src/index')
+
+const pubsub = new PubSub();
+const SOMETHING_CHANGED_TOPIC = 'something_changed';
+
 const resolvers = {
   Query: {
     hello: () => 'Hello world!',
@@ -5,25 +10,21 @@ const resolvers = {
   },
   Mutation: {
     createMessage: ({ input }, context) => {
+
       const message = {
         id: 123,
         content: 'Content XYZ',
         author: 'Me'
       }
 
+      pubsub.publish(SOMETHING_CHANGED_TOPIC, { messageCreated: message });
+
       return message;
     }
   },
   Subscription: {
     messageCreated: {
-      subscribe: () => {
-        console.log('messageCreated')
-      }
-    },
-    newMessage: {
-      subscribe: () => {
-        console.log('newMessage')
-      }
+      subscribe: () => pubsub.asyncIterator(SOMETHING_CHANGED_TOPIC)
     }
   }
 };
@@ -51,7 +52,6 @@ const typeDefs = `
 
   type Subscription {
     messageCreated: Message
-    newMessage: Message
   }
 `;
 

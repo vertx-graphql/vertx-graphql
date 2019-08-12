@@ -14,8 +14,14 @@
  * under the License.
  */
 
+import { isObject } from './is-object';
+import { createEmptyIterable } from './empty-iterable';
+import { isASubscriptionOperation } from './is-subscription';
 import { parseLegacyProtocolMessage } from './parse-legacy-protocol';
 
 module.exports = {
+  isObject,
+  createEmptyIterable,
+  isASubscriptionOperation,
   parseLegacyProtocolMessage
 }

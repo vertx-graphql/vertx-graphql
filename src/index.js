@@ -15,7 +15,14 @@
  */
 
 import { GraphQLServer } from './bin/server';
+import { PubSubEngine, PubSub, PubSubOptions, withFilter, ResolverFn, FilterFn } from 'graphql-subscriptions';
 
 module.exports = {
-  GraphQLServer
+  GraphQLServer,
+  PubSubEngine,
+  PubSub,
+  PubSubOptions,
+  withFilter,
+  ResolverFn,
+  FilterFn
 };
